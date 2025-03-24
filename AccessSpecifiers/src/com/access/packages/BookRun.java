@@ -1,11 +1,11 @@
 package com.access.packages;
 
-public class BookInSamePackage {
-    Book book=new Book();
+public class BookRun {
+
    public void Bookrun()
-    {
-        book.priceAndPageDisplay();
+    {   Book book=new Book();
         book.priceAndPageDisplay();
         book.displayTitle();
+        book.displayPages();
     }
 }

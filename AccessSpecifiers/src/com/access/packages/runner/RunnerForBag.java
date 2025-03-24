@@ -1,13 +1,13 @@
 package com.access.packages.runner;
 
-import com.access.packages.BagInSamePackage;
+import com.access.packages.Bag;
 
 public class RunnerForBag {
     public static void main(String[] args) {
-        BagInSamePackage bagInSamePackage=new BagInSamePackage();
-        bagInSamePackage.brandRunBag();
-        bagInSamePackage.noOfZip();
-        bagInSamePackage.cost();
+       Bag bag=new Bag();
+       bag.costDisplay();
+       bag.displayBrand();
+      //  bag.displayCost(); having private access
 
     }
 }
