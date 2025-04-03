@@ -257,7 +257,7 @@ public class MainRunner {
         sport10.sportsmanship();
         sport10.trainingAndPractice();
 
-        System.out.println("=============");
+        System.out.println("==============");
         Sport sport11=new Golf();
         sport11.entertainmentValue();
         sport11.scoringSystem();
