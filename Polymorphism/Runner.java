@@ -20,7 +20,7 @@ public class Runner {
         armyVehicle.wheel(mrfTyre);
         Rubber rubber2=new Tyre();
         rubber2.expand();
-        rubber2.compress();
+      //  rubber2.compress();
     }
 
 }
