@@ -2,6 +2,7 @@ package parent.child.external;
 
 import parent.child.internal.Chef;
 import parent.child.internal.Cook;
+import parent.child.utility.MasterChef;
 
 public class CookRunner {
 
@@ -30,6 +31,10 @@ public class CookRunner {
             cook1.methods();
             cook1.cuisine();
             cook1.tools();
+            System.out.println("------");
+            MasterChef masterChef=new MasterChef();
+            masterChef.masterofMasterchef(cook);
+            masterChef.masterofMasterchef(chef);
         }
     }
 

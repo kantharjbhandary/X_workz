@@ -2,6 +2,7 @@ package parent.child.external;
 
 import parent.child.internal.CareerGoals;
 import parent.child.internal.Goal;
+import parent.child.utility.NewGoal;
 
 public class GoalRunner {
         public static void main(String[] args) {
@@ -29,6 +30,10 @@ public class GoalRunner {
             goal1.planning();
             goal1.types();
             goal1.measurement();
+            System.out.println("+++++++++++++");
+            NewGoal newGoal=new NewGoal();
+            newGoal.myGoals(goal);
+            newGoal.myGoals(careerGoals);
         }
 
 }

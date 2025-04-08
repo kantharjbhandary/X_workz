@@ -9,4 +9,5 @@ public class Goal {
     public void planning() { System.out.println("Goals require proper planning"); }
     public void types() { System.out.println("Goals can be short-term or long-term"); }
     public void measurement() { System.out.println("Goals should be measurable"); }
+
 }

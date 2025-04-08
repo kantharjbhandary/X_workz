@@ -13,8 +13,8 @@ public class NewGoal {
         goal.types();
         if(goal instanceof CareerGoals)
         {
-            CareerGoals careerGoals=(CareerGoals) goal;
-            careerGoals.;
+            CareerGoals careerGoals=(CareerGoals)goal;
+            careerGoals.utilityMethod();
 
         }
     }

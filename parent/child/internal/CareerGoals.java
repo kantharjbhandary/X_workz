@@ -10,5 +10,9 @@ public class CareerGoals extends Goal{
     public void planning() { System.out.println("it require proper planning"); }
     public void types() { System.out.println("it can be short-term or long-term"); }
     public void measurement() { System.out.println("it should be measurable"); }
+    public void utilityMethod()
+    {
+        System.out.println("The method is updated");
+    }
 }
 
