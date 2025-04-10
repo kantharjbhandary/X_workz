@@ -399,7 +399,7 @@ public class Runner {
         System.out.println("original hashcode using inbuilt method: " + System.identityHashCode(yarn));
         System.out.println("The code is: " + yarn.hashCode());
 
-        Fabric fabric = new Fabric();
+        Fabric fabric = new Fabric(); 
         System.out.println("original hashcode using inbuilt method: " + System.identityHashCode(fabric));
         System.out.println("The code is: " + fabric.hashCode());
 
