@@ -1,29 +1,21 @@
 package com.comparison.app;
 
-import java.util.Objects;
-
 public class Bag {
-    private String size;
-    private String brand;
-    private int quantity;
+    private String name;
+    private int size;
+    private String color;
 
-    public Bag(String size, String brand, int quantity) {
+    public Bag(String name, int size, String color) {
+        this.name = name;
         this.size = size;
-        this.brand = brand;
-        this.quantity = quantity;
+        this.color = color;
     }
 
     @Override
     public boolean equals(Object obj) {
         if (obj != null) {
-            System.out.println("reference is not null");
-        }
-        if (obj instanceof Bag) {
-            Bag bag = this;
-            Bag bag1 = (Bag) obj;
-            if (bag.brand.equals(bag1.brand) &&
-                bag.size.equals(bag1.size) &&
-                bag.quantity == bag1.quantity) {
+            System.out.println("References are not null");
+            if (obj instanceof Bag) {
                 return true;
             }
         }
@@ -31,12 +23,7 @@ public class Bag {
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(size, brand, quantity);
-    }
-
-    @Override
     public String toString() {
-        return "size : " + size + ", brand : " + brand + ", quantity : " + quantity;
+        return "name : " + name + ", size : " + size + ", color : " + color;
     }
 }
