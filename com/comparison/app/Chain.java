@@ -1,21 +1,29 @@
 package com.comparison.app;
 
-public class Chain {
-    private String name;
-    private int size;
-    private String color;
+import java.util.Objects;
 
-    public Chain(String name, int size, String color) {
-        this.name = name;
+public class Chain {
+    private String size;
+    private String brand;
+    private int quantity;
+
+    public Chain(String size, String brand, int quantity) {
         this.size = size;
-        this.color = color;
+        this.brand = brand;
+        this.quantity = quantity;
     }
 
     @Override
     public boolean equals(Object obj) {
         if (obj != null) {
-            System.out.println("References are not null");
-            if (obj instanceof Chain) {
+            System.out.println("reference is not null");
+        }
+        if (obj instanceof Chain) {
+            Chain chain = this;
+            Chain chain1 = (Chain) obj;
+            if (chain.brand.equals(chain1.brand) &&
+                chain.size.equals(chain1.size) &&
+                chain.quantity == chain1.quantity) {
                 return true;
             }
         }
@@ -23,7 +31,12 @@ public class Chain {
     }
 
     @Override
+    public int hashCode() {
+        return Objects.hash(size, brand, quantity);
+    }
+
+    @Override
     public String toString() {
-        return "name : " + name + ", size : " + size + ", color : " + color;
+        return "size : " + size + ", brand : " + brand + ", quantity : " + quantity;
     }
 }

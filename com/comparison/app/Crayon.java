@@ -1,21 +1,29 @@
 package com.comparison.app;
 
-public class Crayon {
-    private String name;
-    private int size;
-    private String color;
+import java.util.Objects;
 
-    public Crayon(String name, int size, String color) {
-        this.name = name;
+public class Crayon {
+    private String size;
+    private String brand;
+    private int quantity;
+
+    public Crayon(String size, String brand, int quantity) {
         this.size = size;
-        this.color = color;
+        this.brand = brand;
+        this.quantity = quantity;
     }
 
     @Override
     public boolean equals(Object obj) {
         if (obj != null) {
-            System.out.println("References are not null");
-            if (obj instanceof Crayon) {
+            System.out.println("reference is not null");
+        }
+        if (obj instanceof Crayon) {
+            Crayon crayon = this;
+            Crayon crayon1 = (Crayon) obj;
+            if (crayon.brand.equals(crayon1.brand) &&
+                crayon.size.equals(crayon1.size) &&
+                crayon.quantity == crayon1.quantity) {
                 return true;
             }
         }
@@ -23,7 +31,12 @@ public class Crayon {
     }
 
     @Override
+    public int hashCode() {
+        return Objects.hash(size, brand, quantity);
+    }
+
+    @Override
     public String toString() {
-        return "name : " + name + ", size : " + size + ", color : " + color;
+        return "size : " + size + ", brand : " + brand + ", quantity : " + quantity;
     }
 }

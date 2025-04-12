@@ -1,21 +1,29 @@
 package com.comparison.app;
 
-public class Broom {
-    private String name;
-    private int size;
-    private String color;
+import java.util.Objects;
 
-    public Broom(String name, int size, String color) {
-        this.name = name;
+public class Broom {
+    private String size;
+    private String brand;
+    private int quantity;
+
+    public Broom(String size, String brand, int quantity) {
         this.size = size;
-        this.color = color;
+        this.brand = brand;
+        this.quantity = quantity;
     }
 
     @Override
     public boolean equals(Object obj) {
         if (obj != null) {
-            System.out.println("References are not null");
-            if (obj instanceof Broom) {
+            System.out.println("reference is not null");
+        }
+        if (obj instanceof Broom) {
+            Broom broom = this;
+            Broom broom1 = (Broom) obj;
+            if (broom.brand.equals(broom1.brand) &&
+                broom.size.equals(broom1.size) &&
+                broom.quantity == broom1.quantity) {
                 return true;
             }
         }
@@ -23,7 +31,12 @@ public class Broom {
     }
 
     @Override
+    public int hashCode() {
+        return Objects.hash(size, brand, quantity);
+    }
+
+    @Override
     public String toString() {
-        return "name : " + name + ", size : " + size + ", color : " + color;
+        return "size : " + size + ", brand : " + brand + ", quantity : " + quantity;
     }
 }

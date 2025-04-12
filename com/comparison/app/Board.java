@@ -1,21 +1,29 @@
 package com.comparison.app;
 
-public class Board {
-    private String name;
-    private int size;
-    private String color;
+import java.util.Objects;
 
-    public Board(String name, int size, String color) {
-        this.name = name;
+public class Board {
+    private String size;
+    private String brand;
+    private int quantity;
+
+    public Board(String size, String brand, int quantity) {
         this.size = size;
-        this.color = color;
+        this.brand = brand;
+        this.quantity = quantity;
     }
 
     @Override
     public boolean equals(Object obj) {
         if (obj != null) {
-            System.out.println("References are not null");
-            if (obj instanceof Board) {
+            System.out.println("reference is not null");
+        }
+        if (obj instanceof Board) {
+            Board board = this;
+            Board board1 = (Board) obj;
+            if (board.brand.equals(board1.brand) &&
+                board.size.equals(board1.size) &&
+                board.quantity == board1.quantity) {
                 return true;
             }
         }
@@ -23,7 +31,12 @@ public class Board {
     }
 
     @Override
+    public int hashCode() {
+        return Objects.hash(size, brand, quantity);
+    }
+
+    @Override
     public String toString() {
-        return "name : " + name + ", size : " + size + ", color : " + color;
+        return "size : " + size + ", brand : " + brand + ", quantity : " + quantity;
     }
 }
