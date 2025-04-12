@@ -1,6 +1,6 @@
 package com.comparison.app;
 
-import com.compare.app1.*;
+
 
 public class Runner {
     public static void main(String[] args) {

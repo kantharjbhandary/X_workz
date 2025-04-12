@@ -1,6 +1,6 @@
 package com.comparison.app;
 
-import java.util.Objects;
+
 
 public class Fork {
     private String name;
@@ -27,11 +27,7 @@ public class Fork {
         return false;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, size);
-    }
-
+    
     @Override
     public String toString() {
         return "name : " + name + ", size : " + size;

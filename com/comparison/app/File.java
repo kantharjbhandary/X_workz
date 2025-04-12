@@ -1,6 +1,6 @@
 package com.comparison.app;
 
-import java.util.Objects;
+
 
 public class File {
     private String name;
@@ -27,11 +27,7 @@ public class File {
         return false;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, size);
-    }
-
+    
     @Override
     public String toString() {
         return "name : " + name + ", size : " + size;
