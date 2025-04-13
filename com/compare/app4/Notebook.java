@@ -15,9 +15,9 @@ public class Notebook {
             System.out.println("reference is not null");
         }
         if (obj instanceof Notebook) {
-            Notebook notebook = this;
+            Notebook notebo = this;
             Notebook notebook1 = (Notebook) obj;
-            if (notebook.pages == notebook1.pages) {
+            if (notebo.pages == notebook1.pages) {
                 return true;
             }
         }
